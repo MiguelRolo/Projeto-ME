@@ -32,7 +32,7 @@ View(student_mat_v2)
 
 
 (ni.2 = table(student_mat_v2$sex))  # frequências absolutas 
-(fi.2 = prop.table(ni.2))            # frequências relativas 
+(fi.2 = prop.table(ni.2))            # frequências relativas
 (Ni.2 = cumsum(ni.2))                # frequências absolutas acumuladas 
 (Fi.2 = cumsum(fi.2))                # frequências relativas acumuladas 
 
@@ -257,20 +257,11 @@ hist(student_mat_v2$absences,
      xaxt="n")                  # para poder definir o eixo dos xx 
      axis(side=1, at=cortes.11)  # definir os valores para o eixo dos xx igual às classes 
      
-     
-
- 
-    
-
      library(kableExtra)
      
      kable(tabela.frequencias.school, "html", 
            caption = "Frequency Table of Absences") %>%
        kable_styling(bootstrap_options = c("striped", "hover", "condensed"), 
                      full_width = F)
-
-
-
-
 
 
